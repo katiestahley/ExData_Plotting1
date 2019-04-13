@@ -14,7 +14,7 @@ unzip("dataset.zip", exdir = "dataset")
 
 # Read the data into a dataframe 
 data <- read.table("dataset\\household_power_consumption.txt", sep = ";", 
-                   header = TRUE, stringsAsFactors = FALSE)
+                   header = TRUE, stringsAsFactors = FALSE, na.strings = "?")
 
 # Convert Date to date/time class
 data$Date <- as.Date(data$Date, "%d/%m/%Y")
